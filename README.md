@@ -66,15 +66,15 @@ O aplicativo desenvolvido conta com as seguintes funcionalidades:
 
 - Personalização do tempo para que a pessoa possa ter maior controle do tempo de foco (necessário, pois cada pessoa tem seu tempo de foco pessoal)
 
-## Conclusão
+# Conclusão
 
 A partir do desenvolvimento deste projeto, foi possível alcançar os objetivos propostos, criando um aplicativo funcional e intuitivo. As principais conclusões incluem:
 
-### 1. Objetivos Atingidos
+## 1. Objetivos Atingidos
 
 - O aplicativo cumpriu seu propósito de combinar organização de tarefas e produtividade em uma única ferramenta.
 
-### 2. Principais Desafios:
+## 2. Principais Desafios:
 
 - Configuração inicial do ambiente de desenvolvimento para React Native
 
@@ -82,13 +82,13 @@ A partir do desenvolvimento deste projeto, foi possível alcançar os objetivos 
 
 - Garantir a usabilidade e responsividade do aplicativo em diferentes dispositivos.
 
-### 3. Aprendizados:
+## 3. Aprendizados:
 
 - Familiaridade com o framework React Native e suas bibliotecas.
 
 - Melhora na lógica de implementação de navegação e manipulação de estados.
 
-### 4. Possíveis Melhorias Futuras:
+## 4. Possíveis Melhorias Futuras:
 
 - Adicionar sincronização em nuvem para permitir o acesso às tarefas em diferentes dispositivos.
 
