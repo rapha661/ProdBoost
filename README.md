@@ -103,7 +103,7 @@ A partir do desenvolvimento deste projeto, foi possível alcançar os objetivos 
 
 - Melhora na lógica de implementação de navegação e manipulação de estados.
 
-## 4. Possíveis Melhorias Futuras:
+### 4. Possíveis Melhorias Futuras:
 
 - Adicionar sincronização em nuvem para permitir o acesso às tarefas em diferentes dispositivos.
 
