@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import {View,Text,TextInput,Button,FlatList,TouchableOpacity,Alert,Vibration,StyleSheet,KeyboardAvoidingView,TouchableWithoutFeedback,Keyboard,Image,Platform} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { NavigationContainer } from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
+
 
 // Tela de Login
 function LoginScreen({ navigation }) {
@@ -79,5 +83,40 @@ function CadastroScreen() {
         </View>
       </DismissKeyboard>
     </KeyboardAvoidingView>
+  );
+}
+
+// Navegação entre as telas
+function AuthTabs() {
+  return (
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ color, size }) => {
+          let iconName;
+
+          if (route.name === 'Login') {
+            iconName = 'sign-in';
+          } else if (route.name === 'Cadastro') {
+            iconName = 'user-plus';
+          }
+
+          return <Icon name={iconName} size={size} color={color} />;
+        },
+      })}
+    >
+      <Tab.Screen name="Login" component={LoginScreen} />
+      <Tab.Screen name="Cadastro" component={CadastroScreen} />
+    </Tab.Navigator>
+  );
+}
+
+// Main App
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Auth" component={AuthTabs} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
