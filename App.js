@@ -315,3 +315,99 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    padding: 20,
+  },
+  title: {
+    fontSize: 24,
+    marginBottom: 20,
+    textAlign: 'center',
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    padding: 8,
+    marginBottom: 10,
+  },
+  addTaskContainer: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  addButton: {
+    marginTop: 10,
+    backgroundColor: '#28a745',
+    padding: 10,
+    borderRadius: 5,
+  },
+  addButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  taskContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 10,
+    borderBottomWidth: 1,
+  },
+  task: {
+    fontSize: 18,
+  },
+  taskDone: {
+    fontSize: 18,
+    textDecorationLine: 'line-through',
+    color: 'gray',
+  },
+  doneButton: {
+    backgroundColor: '#007bff',
+    padding: 5,
+    borderRadius: 5,
+    marginLeft: 10,
+  },
+  doneButtonText: {
+    color: '#fff',
+    fontSize: 14,
+    fontWeight: 'bold',
+  },
+  pomodoroImage: {
+    width: 150,
+    height: 150,
+    alignSelf: 'center',
+    marginVertical: 20,
+  },
+  timer: {
+    fontSize: 48,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginVertical: 20,
+  },
+  mode: {
+    fontSize: 20,
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginBottom: 20,
+  },
+  adjustTimeContainer: {
+    marginTop: 20,
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  label: {
+    fontSize: 16,
+    marginBottom: 5,
+  },
+});
