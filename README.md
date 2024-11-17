@@ -58,6 +58,14 @@ O aplicativo desenvolvido conta com as seguintes funcionalidades:
 
 - Adicionar a tarefa por meio da criação de um id único com texto e estado de conclusão.
 
+![img_readme](./img_readme/tela_tarefa.png)
+
+![img_readme](./img_readme/antes_adicionar_tarefa.png)
+
+![img_readme](./img_readme/tarefa_registrada.png)
+
+![img_readme](./img_readme/excluiu_tarefa.png)
+
 ## 4. Pomodoro
 
 - O Pomodoro ajuda os usuários a gerenciarem sessões de foco e descanso, baseado no método Pomodoro. Inclui tempos ajustáveis para foco e descanso, alternância automática entre os modos e vibração ao final de cada sessão.
@@ -65,6 +73,12 @@ O aplicativo desenvolvido conta com as seguintes funcionalidades:
 - Contagem regressiva para saber quanto tempo falta para o usuário começar ou acabar o descanso (celular vibra para avisar o usuário)
 
 - Personalização do tempo para que a pessoa possa ter maior controle do tempo de foco (necessário, pois cada pessoa tem seu tempo de foco pessoal)
+
+![img_readme](./img_readme/tela_pomodoro.png)
+
+![img_readme](./img_readme/edicao_tempo_pomodoro.png)
+
+![img_readme](./img_readme/tela_descanso_pomodoro.png)
 
 # Conclusão
 
