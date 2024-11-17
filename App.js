@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import {View,Text,TextInput,Button,FlatList,TouchableOpacity,Alert,Vibration,StyleSheet,KeyboardAvoidingView,TouchableWithoutFeedback,Keyboard,Image,Platform} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 // Fechar teclado quando clicar em outro lugar
@@ -151,6 +149,102 @@ function TodoScreen() {
               </View>
             )}
           />
+        </View>
+      </DismissKeyboard>
+    </KeyboardAvoidingView>
+  );
+}
+
+// Tela pomodoro
+const um_segundo = 1000;
+function PomodoroScreen() {
+  const [focusTime, setFocusTime] = useState(25);
+  const [breakTime, setBreakTime] = useState(5);
+  const [timer, setTimer] = useState(focusTime * 60);
+  const [isRunning, setIsRunning] = useState(false);
+  const [isFocusMode, setIsFocusMode] = useState(true);
+
+  useEffect(() => {
+    setTimer(focusTime * 60);
+  }, [focusTime]);
+
+  useEffect(() => {
+    let interval;
+    if (isRunning) {
+      interval = setInterval(() => {
+        setTimer((prev) => {
+          if (prev > 0) {
+            return prev - 1;
+          } else {
+            Vibration.vibrate(um_segundo * 10);
+            setIsFocusMode(!isFocusMode);
+            setTimer(isFocusMode ? breakTime * 60 : focusTime * 60);
+            return 0;
+          }
+        });
+      }, 1000);
+    } else {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [isRunning, isFocusMode, focusTime, breakTime]);
+
+  const resetTimer = () => {
+    setIsRunning(false);
+    setIsFocusMode(true); 
+    setTimer(focusTime * 60);
+  };
+
+  const formatTime = (time) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  };
+
+  return (
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      style={styles.container}
+    >
+      <DismissKeyboard>
+        <View>
+          <Text style={styles.title}>Pomodoro Timer</Text>
+          <Text style={styles.timer}>{formatTime(timer)}</Text>
+          <Text style={styles.mode}>
+            {isFocusMode ? 'Modo Foco' : 'Modo Descanso'}
+          </Text>
+          <Image
+            source={isFocusMode ? require('./assets/livro_foco.png') : require('./assets/cafe_descanso.png')}
+            style={styles.pomodoroImage}
+          />
+          <View style={styles.buttonContainer}>
+            <Button
+              title={isRunning ? 'Pausar' : 'Iniciar'}
+              onPress={() => setIsRunning(!isRunning)}
+            />
+            <Button title="Resetar" onPress={resetTimer} />
+          </View>
+          <View style={styles.adjustTimeContainer}>
+            <Text style={styles.sectionTitle}>Ajustar Tempos</Text>
+            <Text style={styles.label}>Foco (min):</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="25"
+              placeholderTextColor="#aaa"
+              keyboardType="numeric"
+              value={focusTime.toString()}
+              onChangeText={(text) => setFocusTime(Number(text) || 0)}
+            />
+            <Text style={styles.label}>Descanso (min):</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="5"
+              placeholderTextColor="#aaa"
+              keyboardType="numeric"
+              value={breakTime.toString()}
+              onChangeText={(text) => setBreakTime(Number(text) || 0)}
+            />
+          </View>
         </View>
       </DismissKeyboard>
     </KeyboardAvoidingView>
