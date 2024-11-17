@@ -43,3 +43,41 @@ function LoginScreen({ navigation }) {
     </KeyboardAvoidingView>
   );
 }
+
+// Tela de Cadastro
+function CadastroScreen() {
+  const [username, setUsername] = useState('');
+  const [senha, senhaArmazenada] = useState('');
+
+  const handleRegister = async () => {
+    await AsyncStorage.setItem(username, senha);
+    Alert.alert('Sucesso', 'Usuário cadastrado com sucesso!');
+  };
+
+  return (
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      style={styles.container}
+    >
+      <DismissKeyboard>
+        <View>
+          <Text style={styles.title}>Cadastro</Text>
+          <TextInput
+            placeholder="Usuário"
+            placeholderTextColor="#aaa"
+            onChangeText={setUsername}
+            style={styles.input}
+          />
+          <TextInput
+            placeholder="Senha"
+            placeholderTextColor="#aaa"
+            secureTextEntry
+            onChangeText={senhaArmazenada}
+            style={styles.input}
+          />
+          <Button title="Registrar" onPress={handleRegister} />
+        </View>
+      </DismissKeyboard>
+    </KeyboardAvoidingView>
+  );
+}
