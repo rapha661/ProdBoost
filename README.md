@@ -37,10 +37,14 @@ O aplicativo desenvolvido conta com as seguintes funcionalidades:
 
 - Valida as credenciais armazenadas localmente usando o 'AsyncStorage' mostrando se o usuário inserido esta incorreto.
 
+
 - Imagem padrão da tela de login
+  
 ![img_readme](./img_readme/tela_login.png)
 
+
 - Imagem de login errado
+  
 ![img_readme](./img_readme/tela_login_errado.png)
 
 ## 2. Tela de Cadastro
@@ -49,13 +53,19 @@ O aplicativo desenvolvido conta com as seguintes funcionalidades:
 
 - O usuário insere um nome de usuário e uma senha.
 
+
 - Tela padrão do cadastro
+  
 ![img_readme](./img_readme/tela_cadastro.png)
 
+
 - Tela com usuário sendo cadastrado
+  
 ![img_readme](./img_readme/realizando_cadastro.png)
 
+
 - Tela com mensagem de confirmação do cadastro
+  
 ![img_readme](./img_readme/confirmacao_cadastro.png)
 
 ## 3. To-do List
@@ -64,16 +74,24 @@ O aplicativo desenvolvido conta com as seguintes funcionalidades:
 
 - Adicionar a tarefa por meio da criação de um id único com texto e estado de conclusão.
 
+
 - Tela padrão do To-do List
+  
 ![img_readme](./img_readme/tela_tarefa.png)
 
+
 - Tela com tarefa sendo adicionada
+  
 ![img_readme](./img_readme/antes_adicionar_tarefa.png)
 
+
 - Tela com tarefa registrada
+  
 ![img_readme](./img_readme/tarefa_registrada.png)
 
+
 - Tela após excluir tarefa
+  
 ![img_readme](./img_readme/excluiu_tarefa.png)
 
 ## 4. Pomodoro
@@ -84,13 +102,19 @@ O aplicativo desenvolvido conta com as seguintes funcionalidades:
 
 - Personalização do tempo para que a pessoa possa ter maior controle do tempo de foco (necessário, pois cada pessoa tem seu tempo de foco pessoal)
 
+
 - Tela padrão do Pomodoro (livro indicando tempo de foco)
+  
 ![img_readme](./img_readme/tela_pomodoro.png)
 
+
 - Tela com tempo de foco e descanso editada
+  
 ![img_readme](./img_readme/edicao_tempo_pomodoro.png)
 
+
 - Tela do pomodoro no tempo de descanso (imagem de uma xícara de café)
+  
 ![img_readme](./img_readme/tela_descanso_pomodoro.png)
 
 # Conclusão
