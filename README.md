@@ -104,12 +104,12 @@ O aplicativo desenvolvido conta com as seguintes funcionalidades:
 - Personalização do tempo para que a pessoa possa ter maior controle do tempo de foco (necessário, pois cada pessoa tem seu tempo de foco pessoal)
 
 
-1. Tela padrão do Pomodoro (livro indicando tempo de foco)
+1. Tela padrão do Pomodoro
   
 ![img_readme](./img_readme/tela_pomodoro.png)
 
 
-2. Tela com tempo de foco e descanso editada
+2. Tela com tempo de foco e descanso editada (livro indicando tempo de foco)
   
 ![img_readme](./img_readme/edicao_tempo_pomodoro.png)
 
